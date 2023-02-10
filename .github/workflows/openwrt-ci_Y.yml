@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: zte_e8820s or redmi-ac2100 
+name: zte_e8820s or redmi-ac2100
 
 on:
   workflow_dispatch:
