@@ -61,7 +61,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
         
-    
       - name: Space cleanup and Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
