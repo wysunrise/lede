@@ -159,17 +159,16 @@ jobs:
       #     name: OpenWrt_package
       #     path: ./artifact/package/
 
-      - name: Deliver firmware
-        uses: actions/upload-artifact@main 
-        with:
-          name: OpenWrt_firmware
-          path: ./bin/targets/
-        
       - name: Set current date as env variable   
         run: |     
           echo "FILE_DATE=$(date +"%m%d_%H%M")" >> $GITHUB_ENV
 
-
+      - name: Deliver firmware
+        uses: actions/upload-artifact@main 
+        with:
+          name: ${{ inputs.model }}_${{ env.FILE_DATE }}
+          path: ./bin/targets/
+        
       - name: Upload release asset
         # if: github.event == 'release'
         uses: svenstaro/upload-release-action@master
