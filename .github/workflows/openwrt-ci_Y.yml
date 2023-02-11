@@ -18,7 +18,7 @@ on:
         default: 'zte_e8820s'
         type: choice
         options:
-          - 'redmi-ac2100'
+          - 'zte_e8820s'
           - 'xiaomi_redmi-router-ac2100'
           # - 'xiaomi-4a-gigabit'
           # - 'xiaomi-3g-v2'
