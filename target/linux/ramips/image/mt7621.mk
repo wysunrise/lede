@@ -1811,8 +1811,8 @@ define Device/xiaomi_redmi-router-ac2100
   $(Device/xiaomi_nand_separate)
   DEVICE_MODEL := Redmi Router AC2100
   IMAGE_SIZE := 120320k
-  DEVICE_PACKAGES += kmod-mt7603 kmod-mt7615e \
-	kmod-mt7615-firmware
+  DEVICE_PACKAGES += kmod-mt7603 kmod-mt7615e kmod-mt7615-firmware \
+	wpad-openssl
 endef
 TARGET_DEVICES += xiaomi_redmi-router-ac2100
 
@@ -1971,7 +1971,7 @@ define Device/zte_e8820s
 	check-size
   DEVICE_VENDOR := ZTE
   DEVICE_MODEL := E8820S
-  DEVICE_PACKAGES := kmod-mt7603e kmod-mt76x2e kmod-usb3 \
-	kmod-usb-ledtrig-usbport luci-app-mtwifi
+  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 kmod-mt76x2-common kmod-usb3 \
+	kmod-usb-ledtrig-usbport wpad-openssl
 endef
 TARGET_DEVICES += zte_e8820s
